@@ -2630,3 +2630,389 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+/*--------------------------------------------------------------
+# Stats / Impact Section
+--------------------------------------------------------------*/
+.stats.section {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #fff5f2 0%, #f0f4ff 100%);
+}
+
+/* Decorative radial glow blobs removed */
+.stats.section::before,
+.stats.section::after {
+  display: none;
+}
+
+.stats .container {
+  position: relative;
+  z-index: 1;
+}
+
+.stats .stats-header {
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.stats .stats-label {
+  display: inline-block;
+  color: #f03c02;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.stats .stats-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2b2320;
+  margin-bottom: 12px;
+}
+
+.stats .stats-subtext {
+  color: color-mix(in srgb, #2b2320, transparent 40%);
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* Stat card */
+.stats .stat-card {
+  position: relative;
+  overflow: hidden;
+  /* Glassmorphism */
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  height: 100%;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  /* default accent (orange) */
+  --stat-accent: #f03c02;
+  --stat-accent-rgb: 240, 60, 2;
+}
+
+.stats .stat-card--orange {
+  --stat-accent: #f03c02;
+  --stat-accent-rgb: 240, 60, 2;
+}
+
+.stats .stat-card--teal {
+  --stat-accent: #1a8a5a;
+  --stat-accent-rgb: 26, 138, 90;
+}
+
+.stats .stat-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(var(--stat-accent-rgb), 0.28);
+}
+
+/* Icon inside circular background with pulsing ring */
+.stats .stat-icon-wrap {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(var(--stat-accent-rgb), 0.1);
+  z-index: 1;
+}
+
+.stats .stat-icon-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(var(--stat-accent-rgb), 0.45);
+  animation: statPulse 2.2s ease-out infinite;
+  z-index: -1;
+}
+
+@keyframes statPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+}
+
+.stats .stat-icon {
+  font-size: 2rem;
+  color: var(--stat-accent);
+  line-height: 1;
+}
+
+/* Number */
+.stats .stat-number {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #2b2320;
+  line-height: 1.15;
+}
+
+/* "+" suffix rendered inside the count text gets the accent color via ::after trick */
+.stats .stat-count {
+  color: #2b2320;
+}
+
+.stats .stat-suffix {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #f03c02;
+  line-height: 1.15;
+}
+
+.stats .stat-growing {
+  color: #1a8a5a;
+}
+
+.stats .stat-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: color-mix(in srgb, #2b2320, transparent 50%);
+  margin-top: 8px;
+}
+
+/* Horizontal progress bar (fills on scroll into view) */
+.stats .reach-bar {
+  height: 5px;
+  width: 100%;
+  margin-top: 16px;
+  border-radius: 999px;
+  background: rgba(var(--stat-accent-rgb), 0.15);
+  overflow: hidden;
+}
+
+.stats .reach-bar-fill {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    rgb(var(--stat-accent-rgb)),
+    rgba(var(--stat-accent-rgb), 0.4)
+  );
+  /* delay ~0.4s so it starts after the number count-up */
+  transition: width 1.4s ease-out 0.4s;
+}
+
+/* Fill triggered when the stats section scrolls into view */
+.stats.stats-in-view .reach-bar-fill {
+  width: 85%;
+}
+
+/* Floating decorative dots (top-right) */
+.stats .stat-dot {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--stat-accent);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.stats .stat-dot--1 {
+  width: 8px;
+  height: 8px;
+  top: 16px;
+  right: 18px;
+  animation: statFloat 3.5s ease-in-out infinite;
+}
+
+.stats .stat-dot--2 {
+  width: 5px;
+  height: 5px;
+  top: 30px;
+  right: 34px;
+  opacity: 0.3;
+  animation: statFloat 4.2s ease-in-out infinite;
+}
+
+@keyframes statFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@media (max-width: 575px) {
+  .stats.section {
+    padding: 60px 0;
+  }
+
+  .stats .stat-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .stats .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .stats .stat-icon-wrap {
+    width: 58px;
+    height: 58px;
+  }
+
+  .stats .stat-icon {
+    font-size: 1.6rem;
+  }
+}
+
+/* Reduced motion: disable looping animations */
+@media (prefers-reduced-motion: reduce) {
+  .stats .stat-icon-wrap::before,
+  .stats .stat-dot--1,
+  .stats .stat-dot--2 {
+    animation: none;
+  }
+}
+
+/*--------------------------------------------------------------
+# Products Section (feature cards)
+--------------------------------------------------------------*/
+.products.section {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+
+.products .products-header {
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.products .products-label {
+  display: inline-block;
+  color: #f03c02;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.products .products-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2b2320;
+  margin-bottom: 10px;
+}
+
+.products .products-subtext {
+  color: color-mix(in srgb, #2b2320, transparent 40%);
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.products .product-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* accent applied per-variant below */
+  --product-accent: #f03c02;
+  --product-accent-rgb: 240, 60, 2;
+}
+
+.products .product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(var(--product-accent-rgb), 0.25);
+}
+
+.products .product-card--orange {
+  --product-accent: #f03c02;
+  --product-accent-rgb: 240, 60, 2;
+}
+
+.products .product-card--teal {
+  --product-accent: #1a8a5a;
+  --product-accent-rgb: 26, 138, 90;
+}
+
+.products .product-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 4px;
+}
+
+.products .product-tagline {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: color-mix(in srgb, #2b2320, transparent 45%);
+  margin-bottom: 1.5rem;
+}
+
+.products .product-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem;
+}
+
+.products .product-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.products .product-feature:last-child {
+  border-bottom: none;
+}
+
+.products .product-feature i {
+  font-size: 1.1rem;
+  color: var(--product-accent);
+  flex-shrink: 0;
+}
+
+.products .product-feature span {
+  font-weight: 400;
+  color: #4d4643;
+}
+
+.products .product-btn {
+  display: inline-block;
+  padding: 10px 26px;
+  border: 2px solid var(--product-accent);
+  border-radius: 30px;
+  color: var(--product-accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.products .product-btn:hover {
+  background-color: var(--product-accent);
+  color: #ffffff;
+}
+
+@media (max-width: 575px) {
+  .products .product-card {
+    padding: 1.75rem;
+  }
+}
