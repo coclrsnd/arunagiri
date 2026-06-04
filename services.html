@@ -89,8 +89,8 @@
                 <a href="index.html">Home<br /></a>
               </li>
               <li><a href="about.html">About</a></li>
-              <li><a href="services.html" class="active">Services</a></li>
-              <li><a href="products.html">Products</a></li>
+              <li><a href="services.html" class="active" style="color: #ef8009">Services</a></li>
+              <li><a href="products.html" style="color: #0a090a">Products</a></li>
               <!-- <li><a href="testimonials.html">Testimonials</a></li> -->
               <li><a href="careers.html">Careers</a></li>
 
@@ -104,7 +104,7 @@
 
     <main class="main">
       <!-- Page Title -->
-      <div class="page-title dark-background">
+      <div class="page-title">
         <div
           class="container d-lg-flex justify-content-between align-items-center"
         >
@@ -122,8 +122,8 @@
       <!-- Features Section -->
       <section id="features" class="features section">
         <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Services</h2>
+        <div class="container section-title" font-size: 2rem data-aos="fade-up">
+          <h2 style="font-size:3rem ; color: #0a090a">Services</h2>
           <p>
             We deliver innovative and results-driven solutions to enhance your
             online presence, engage your audience, and drive business growth.
@@ -131,108 +131,158 @@
         </div>
         <!-- End Section Title -->
 
-        <div class="container">
-          <div class="row justify-content-between">
-            <div class="col-lg-5 d-flex align-items-center">
-              <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
-                <li class="nav-item">
-                  <a
-                    class="nav-link active show"
-                    data-bs-toggle="tab"
-                    data-bs-target="#features-tab-1"
-                  >
-                    <i class="bi bi-window"></i>
-                    <div>
-                      <h4 class="d-none d-lg-block">WEB APPLICATIONS</h4>
-                      <p>
-                        Also we provide web applications with new frameworks and
-                        technologies.
-                      </p>
-                    </div>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    data-bs-toggle="tab"
-                    data-bs-target="#features-tab-2"
-                  >
-                    <i class="bi bi-code-slash"></i>
-                    <div>
-                      <h4 class="d-none d-lg-block">WEB DEVELOPMENT</h4>
-                      <p>
-                        We provide professional custom website development
-                        services tailored to your business needs.
-                      </p>
-                    </div>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    data-bs-toggle="tab"
-                    data-bs-target="#features-tab-3"
-                  >
-                    <i class="bi-palette"></i>
-                    <div>
-                      <h4 class="d-none d-lg-block">WEBSITE DESIGNING</h4>
-                      <p>
-                        We provide static websites with are responsive Designing
-                        user friendly that fullfills your needs.
-                      </p>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-              <!-- End Tab Nav -->
-            </div>
+       <!-- ======= Features Section ======= -->
+<section id="features" class="features">
+  <style>
+    /* --- Premium Tab Section Styles (Same as Before) --- */
 
-            <div class="col-lg-5 d-flex align-items-lg-start">
-              <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
-                <li class="nav-item">
-                  <a
-                    class="nav-link show"
-                    data-bs-toggle="tab"
-                    data-bs-target="#features-tab-1"
-                  >
-                    <i class="bi bi-graph-up-arrow"></i>
-                    <div>
-                      <h4 class="d-none d-lg-block">DIGITAL MARKETING</h4>
-                      <p>
-                        Our core service is one of the digital marketing at
-                        corner points of customers.
-                      </p>
-                    </div>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    data-bs-toggle="tab"
-                    data-bs-target="#features-tab-2"
-                  >
-                    <i class="bi bi-search"></i>
-                    <div>
-                      <h4 class="d-none d-lg-block">
-                        SEARCHENGINE OPTIMIZATION
-                      </h4>
-                      <p>
-                        Hands on experince with Cross-Browser Compatibility and
-                        SEO optimization.
-                      </p>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-              <!-- End Tab Nav -->
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /Features Section -->
-    </main>
+    .nav-tabs {
+      border: none;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
 
-    <footer id="footer" class="footer dark-background">
+    .nav-tabs .nav-link {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 18px 22px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      transition: all 0.35s ease;
+      color: #222;
+    }
+
+    .nav-tabs .nav-link i {
+      font-size: 32px;
+      color: #ff8a00;
+      transition: 0.3s ease;
+    }
+
+    .nav-tabs .nav-link:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 153, 0, 0.55);
+      box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.25);
+    }
+
+    .nav-tabs .nav-link.active {
+      background: rgba(255, 153, 0, 0.15);
+      border-color: #ff9900;
+      box-shadow: 0px 6px 20px rgba(255, 153, 0, 0.3);
+    }
+
+    .nav-tabs .nav-link.active i {
+      color: #ff9900;
+      transform: rotate(-5deg);
+    }
+
+    .nav-tabs .nav-link div h4 {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .nav-tabs .nav-link div p {
+      margin: 0;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    /* Mobile fix */
+    @media (max-width: 991px) {
+      .nav-tabs {
+        gap: 10px;
+      }
+      .nav-tabs .nav-link {
+        flex-direction: row;
+      }
+    }
+  </style>
+
+  <div class="container">
+    <div class="row justify-content-between">
+      
+      <!-- Left Column -->
+      <div class="col-lg-5 d-flex align-items-center">
+        <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-1">
+              <i class="bi bi-window"></i>
+              <div>
+                <h4 class="d-none d-lg-block"; style="font-size: 1.5rem; color: #0a090a">WEB APPLICATIONS</h4>
+                <p>Also we provide web applications with new frameworks and technologies.</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
+              <i class="bi bi-code-slash"></i>
+              <div>
+                <h4 class="d-none d-lg-block"; style="font-size: 1.5rem; color: #0a090a">WEB DEVELOPMENT</h4>
+                <p>We provide professional custom website development services tailored to your business needs.</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
+              <i class="bi bi-palette"></i>
+              <div>
+                <h4 class="d-none d-lg-block"; style="font-size: 1.5rem; color: #0a090a">WEBSITE DESIGNING</h4>
+                <p>We provide static websites which are responsive and user-friendly that fulfill your needs.</p>
+              </div>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+      <!-- End Left Column -->
+
+      <!-- Right Column -->
+      <div class="col-lg-5 d-flex align-items-lg-start">
+        <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+
+          <li class="nav-item">
+            <a class="nav-link show" data-bs-toggle="tab" data-bs-target="#features-tab-4">
+              <i class="bi bi-graph-up-arrow"></i>
+              <div>
+                <h4 class="d-none d-lg-block" style="font-size: 1.5rem; color: #0a090a">DIGITAL MARKETING</h4>
+                <p>Our core service is digital marketing focused on customer engagement.</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-5">
+              <i class="bi bi-search"></i>
+              <div>
+                <h4 class="d-none d-lg-block" style="font-size: 1.5rem; color: #0a090a">SEARCH ENGINE OPTIMIZATION</h4>
+                <p>Hands-on experience with Cross-Browser Compatibility and SEO optimization.</p>
+              </div>
+            </a>
+          </li>
+<li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-5">
+              <i class="bi bi-search"></i>
+              <div>
+                <h4 class="d-none d-lg-block" style="font-size: 1.5rem; color: #0a090a">SEARCH ENGINE OPTIMIZATION</h4>
+                <p>Hands-on experience with Cross-Browser Compatibility and SEO optimization.</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- End Right Column -->
+
+    </div>
+  </div>
+</section>
+<!-- End Features Section -->
+ <footer id="footer" class="footer dark-background">
       <div class="footer-top">
         <div class="container">
           <div class="row gy-4">

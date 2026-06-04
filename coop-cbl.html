@@ -96,73 +96,135 @@
     </header>
 
     <main class="main">
-      <!-- Page Title -->
-      <div class="page-title dark-background">
-        <div
-          class="container d-lg-flex justify-content-between align-items-center"
-        >
-          <h1 class="mb-2 mb-lg-0">COOP-CBL</h1>
-          <nav class="breadcrumbs">
-            <ol>
-              <li><a href="products.html">Products</a></li>
-              <li class="current">Coop-cbl</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-      <!-- End Page Title -->
-      <div style="margin: 1.5rem; padding-top: 2rem; padding-bottom: 5rem">
-        <h2 style="color: #f03c02">COOP-CBL</h2>
-        <p style="font-size: 18px; font-weight: bold">
-          Empowering Cooperative Lending with Confidence and Security
-        </p>
-        <p>
-          COCLR is a state-of-the-art loan provisioning solution designed
-          specifically for cooperative societies. By leveraging advanced risk
-          assessment tools and real-time analysis of credit histories, COCLR
-          enables lenders to make informed, data-driven decisions. This
-          proactive approach helps mitigate risks, prevent defaults, and enhance
-          overall financial health.
-        </p>
-        <p style="font-size: 20px">
-          With COCLR, cooperative societies benefit from:
-        </p>
-        <ul style="margin-top: 2.5rem">
-          <li>
-            <h5>Comprehensive Risk Assessment</h5>
-            <p>
-              Gain deep insights into each loan applicant's financial behavior
-              and credit history.
-            </p>
-          </li>
-          <li>
-            <h5>Real-Time Analysis</h5>
-            <p>
-              Detect early warning signs and take preemptive action to avoid
-              potential financial crises.
-            </p>
-          </li>
-          <li>
-            <h5>Data Security</h5>
-            <p>
-              Ensure the utmost confidentiality and protection of sensitive
-              customer information through robust encryption protocols.
-            </p>
-          </li>
-          <li>
-            <h5>Streamlined Operations</h5>
-            <p>
-              Seamlessly integrate COCLR into existing frameworks to enhance
-              efficiency and promote responsible lending practices.
-            </p>
-          </li>
-        </ul>
-        <p style="font-size: 17px">
-          COCLR stands as a beacon of reliability and innovation, transforming
-          the way cooperative societies manage lending and financial risk.
-        </p>
-      </div>
-    </main>
+     <div class="product-details">
+  <h2>COOP-CBL</h2>
+
+  <p class="subtitle">
+    Empowering Cooperative Lending with Confidence and Security
+  </p>
+
+  <p>
+    COCLR is a state-of-the-art loan provisioning solution designed specifically
+    for cooperative societies. By leveraging advanced risk assessment tools and
+    real-time analysis of credit histories, COCLR enables lenders to make
+    informed, data-driven decisions. This proactive approach helps mitigate
+    risks, prevent defaults, and enhance overall financial health.
+  </p>
+
+  <p class="section-heading">With COCLR, cooperative societies benefit from:</p>
+
+  <ul class="premium-list">
+    <li>
+      <h5>Comprehensive Risk Assessment</h5>
+      <p>Gain deep insights into each loan applicant's financial behavior and credit history.</p>
+    </li>
+
+    <li>
+      <h5>Real-Time Analysis</h5>
+      <p>Detect early warning signs and take preemptive action to avoid potential financial crises.</p>
+    </li>
+
+    <li>
+      <h5>Data Security</h5>
+      <p>Ensure the utmost confidentiality and protection of sensitive customer information through robust encryption protocols.</p>
+    </li>
+
+    <li>
+      <h5>Streamlined Operations</h5>
+      <p>Seamlessly integrate COCLR into existing frameworks to enhance efficiency and promote responsible lending practices.</p>
+    </li>
+  </ul>
+
+  <p class="footer-text">
+    COCLR stands as a beacon of reliability and innovation, transforming
+    the way cooperative societies manage lending and financial risk.
+  </p>
+</div>
+
+<style>
+/* Premium container look */
+.product-details {
+  margin: 2rem;
+  padding: 3rem 2rem;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+  border: 1px solid rgba(255, 100, 50, 0.15);
+}
+
+/* Premium title */
+.product-details h2 {
+  color: #f03c02;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+/* Subtitle */
+.product-details .subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Section small title */
+.product-details .section-heading {
+  margin-top: 2rem;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Paragraph defaults */
+.product-details p {
+  font-size: 17px;
+  line-height: 1.65;
+  color: #444;
+}
+
+/* Premium list */
+.premium-list {
+  list-style: none;
+  margin-top: 2rem;
+  padding-left: 0;
+}
+
+.premium-list li {
+  margin-bottom: 2.2rem;
+  padding-left: 1.8rem;
+  position: relative;
+}
+
+/* Custom premium bullet */
+.premium-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background: #f03c02;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(240, 60, 2, 0.6);
+}
+
+/* List heading */
+.premium-list h5 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Footer paragraph */
+.footer-text {
+  margin-top: 2rem;
+  font-weight: 500;
+  font-size: 17px;
+  color: #333;
+}
+</style>
 
     <footer id="footer" class="footer dark-background">
       <div class="footer-top">

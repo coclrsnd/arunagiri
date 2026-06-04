@@ -82,12 +82,12 @@
               <li>
                 <a href="index.html">Home<br /></a>
               </li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="products.html" class="active">Products</a></li>
+              <li><a href="about.html" style="color: #0a090a">About</a></li>
+              <li><a href="services.html" style="color: #0a090a">Services</a></li>
+              <li><a href="products.html" class="active" style="color: #ef8009">Products</a></li>
               <li><a href="testimonials.html">Testimonials</a></li>
-              <li><a href="careers.html">Careers</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="careers.html" style="color: #0a090a">Careers</a></li>
+              <li><a href="contact.html" style="color: #0a090a">Contact</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </nav>
@@ -96,72 +96,146 @@
     </header>
 
     <main class="main">
-      <!-- Page Title -->
-      <div class="page-title dark-background">
-        <div
-          class="container d-lg-flex justify-content-between align-items-center"
-        >
-          <h1 class="mb-2 mb-lg-0">VIDYATM</h1>
-          <nav class="breadcrumbs">
-            <ol>
-              <li><a href="products.html">Products</a></li>
-              <li class="current">Vidyatm</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-      <!-- End Page Title -->
-      <div style="margin: 1.5rem; padding-top: 2rem; padding-bottom: 5rem">
-        <h2 style="color: #f03c02">VIDYATM</h2>
-        <p style="font-size: 18px; font-weight: bold">
-          Customized ERP Solutions for Educational Excellence
-        </p>
-        <p>
-          Vidyatm is Arunagiri Infotech's premier ERP software, tailored
-          specifically for educational institutions. Designed to streamline
-          administrative processes, enhance operational efficiency, and support
-          academic excellence, Vidyatm has been trusted by numerous reputed
-          institutions.
-        </p>
-        <p style="font-size: 20px">Key Features of Vidyatm:</p>
-        <ul style="margin-top: 2.5rem">
-          <li>
-            <h5>Student Management</h5>
-            <p>
-              Gain deep insights into each loan applicant's financial behavior
-              and credit history.
-            </p>
-          </li>
-          <li>
-            <h5>Faculty Management</h5>
-            <p>
-              Simplify faculty scheduling, payroll, and performance evaluations.
-            </p>
-          </li>
-          <li>
-            <h5>Academic Administration</h5>
-            <p>
-              Manage course structures, timetables, examination schedules, and
-              grading systems seamlessly.
-            </p>
-          </li>
-          <li>
-            <h5>Finance Management</h5>
-            <p>
-              Streamline fee collection, budgeting, and financial reporting with
-              integrated financial tools.
-            </p>
-          </li>
-          <li>
-            <h5>Communication Tools</h5>
-            <p>
-              Enhance communication between students, faculty, and parents
-              through a centralized.
-            </p>
-          </li>
-        </ul>
-      </div>
-    </main>
+
+  <!-- Page Title -->
+  <div class="page-title">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <h1 class="mb-2 mb-lg-0">VIDYATM</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="products.html">Products</a></li>
+          <li class="current">Vidyatm</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- End Page Title -->
+
+  <div class="product-details">
+    <h2>VIDYATM</h2>
+
+    <p class="subtitle">
+      Customized ERP Solutions for Educational Excellence
+    </p>
+
+    <p>
+      Vidyatm is Arunagiri Infotech's premier ERP software, tailored
+      specifically for educational institutions. Designed to streamline
+      administrative processes, enhance operational efficiency, and support
+      academic excellence, Vidyatm has been trusted by numerous reputed
+      institutions.
+    </p>
+
+    <p class="section-heading">Key Features of Vidyatm:</p>
+
+    <ul class="premium-list">
+
+      <li>
+        <h5>Student Management</h5>
+        <p>Manage student profiles, attendance, progress tracking, and performance analysis effortlessly.</p>
+      </li>
+
+      <li>
+        <h5>Faculty Management</h5>
+        <p>Simplify faculty scheduling, payroll, workload distribution, and evaluation procedures.</p>
+      </li>
+
+      <li>
+        <h5>Academic Administration</h5>
+        <p>Control course structures, timetables, exams, grading, and academic compliance effectively.</p>
+      </li>
+
+      <li>
+        <h5>Finance Management</h5>
+        <p>Streamline fee collection, budgeting, accounting, and financial reporting with precision.</p>
+      </li>
+
+      <li>
+        <h5>Communication Tools</h5>
+        <p>Enable seamless communication between students, faculty, and parents through centralized messaging.</p>
+      </li>
+
+    </ul>
+  </div>
+</main>
+
+<style>
+/* Premium container */
+.product-details {
+  margin: 2rem;
+  padding: 3rem 2rem;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+  border: 1px solid rgba(255, 100, 50, 0.15);
+}
+
+/* Premium title */
+.product-details h2 {
+  color: #f03c02;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+/* Subtitle styling */
+.product-details .subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Section label */
+.product-details .section-heading {
+  margin-top: 2rem;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Paragraph base */
+.product-details p {
+  font-size: 17px;
+  line-height: 1.65;
+  color: #444;
+}
+
+/* Premium bullet list */
+.premium-list {
+  list-style: none;
+  margin-top: 2rem;
+  padding-left: 0;
+}
+
+.premium-list li {
+  margin-bottom: 2.2rem;
+  padding-left: 1.8rem;
+  position: relative;
+}
+
+/* Custom premium bullet */
+.premium-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background: #f03c02;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(240, 60, 2, 0.6);
+}
+
+/* Feature headings */
+.premium-list h5 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+  color: #222;
+}
+</style>
+
 
     <footer id="footer" class="footer dark-background">
       <div class="footer-top">

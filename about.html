@@ -79,14 +79,14 @@
           <nav id="navmenu" class="navmenu">
             <ul>
               <li>
-                <a href="index.html">Home<br /></a>
+                <a href="index.html" style="color: #070607" >Home<br /></a>
               </li>
-              <li><a href="about.html" class="active">About</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="products.html">Products</a></li>
+              <li><a href="about.html" class="active" style="color: #ef8009">About</a></li>
+              <li><a href="services.html" style="color: #0a090a" >Services</a></li>
+              <li><a href="products.html" style="color: #050505" >Products</a></li>
               <!-- <li><a href="testimonials.html">Testimonials</a></li> -->
-              <li><a href="careers.html">Careers</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="careers.html" style="color: #090909" >Careers</a></li>
+              <li><a href="contact.html" style="color: #100f10" >Contact</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </nav>
@@ -95,36 +95,20 @@
     </header>
 
     <main class="main">
-      <!-- Page Title -->
-      <div class="page-title dark-background">
-        <div
-          class="container d-lg-flex justify-content-between align-items-center"
-        >
-          <h1 class="mb-2 mb-lg-0">About</h1>
-          <nav class="breadcrumbs">
-            <ol>
-              <li><a href="index.html">Home</a></li>
-              <li class="current">About</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-      <!-- End Page Title -->
-
       <!-- About Section -->
-      <section id="about" class="about section">
+      <section id="about" class="about section" style="color: #7a7283">
         <div class="container">
           <div class="row gy-4">
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <h3 style="color: #f03c02">Welcome to Arunagiri Infotech,</h3>
+              <h3 style="font-size: 2rem; color: #0a090a">Welcome to Arunagiri Infotech,</h3>
               <img
                 src="assets/img/about3.jpg"
                 class="img-fluid rounded-4 mb-4"
                 alt=""
                 style="max-height: 70%; width: 83%"
               />
-              <p>
-                a pioneer in delivering innovative technology solutions tailored
+              <p style=" color: #080808">
+                A pioneer in delivering innovative technology solutions tailored
                 for diverse sectors With a strong foundation in the education
                 sector ERP solutions, we have now expanded our expertise to
                 empower cooperative societies by revolutionizing loan
@@ -132,77 +116,204 @@
                 COCLR.
               </p>
             </div>
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-              <div class="content ps-0 ps-lg-5">
-                <p style="font-size: 1.3rem">Who We Are</p>
-                <ul>
-                  <li>
-                    <i class="bi bi-check-circle-fill"></i>
-                    <span
-                      >Founded on principles of excellence and innovation</span
-                    >
-                  </li>
-                  <li>
-                    <i class="bi bi-check-circle-fill"></i>
-                    <span
-                      >Arunagiri Infotech is a team of dedicated professionals
-                      with deep expertise in financial and educational
-                      technology.</span
-                    >
-                  </li>
-                  <li>
-                    <i class="bi bi-check-circle-fill"></i>
-                    <span
-                      >Our journey began with providing top-notch ERP solutions
-                      to the education sector</span
-                    >
-                  </li>
-                  <li>
-                    <i class="bi bi-check-circle-fill"></i>
-                    <span>
-                      ow we are committed to addressing the unique needs of
-                      cooperative societies.</span
-                    >
-                  </li>
-                </ul>
-                <p style="font-size: 1.3rem">What We Do</p>
-                <ul>
-                  <li>
-                    <i class="bi bi-check-circle-fill"></i>
-                    <span
-                      >At Arunagiri Infotech, we specialize in developing and
-                      delivering comprehensive technology solutions.</span
-                    >
-                  </li>
-                  <li>
-                    <i class="bi bi-check-circle-fill"></i>
-                    <span
-                      >Initially focused on ERP solutions for the education
-                      sector, we have now extended our expertise to the
-                      cooperative sector.</span
-                    >
-                  </li>
-                  <li>
-                    <i class="bi bi-check-circle-fill"></i>
-                    <span
-                      >COCLR, our flagship product, offers real-time analysis of
-                      credit histories and financial behaviors, helping lenders
-                      make informed decisions, mitigate risks, and prevent
-                      defaults.</span
-                    >
-                  </li>
-                  <li>
-                    <i class="bi bi-check-circle-fill"></i>
-                    <span
-                      >Our commitment to robust encryption protocols ensures
-                      that sensitive customer data remains secure.</span
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+           <style>
+/* ------------------ PREMIUM CORPORATE LOOK ------------------ */
+
+/* Content Wrapper */
+.content {
+  padding: 20px 25px;
+  background: #ffffff;
+}
+
+/* Section Titles */
+.content p {
+  font-weight: 800;
+  font-size: 1.6rem !important;
+  color: #0a0a0a !important;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Corporate underline style */
+.content p::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #b74916;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  border-radius: 3px;
+}
+
+/* Corporate List Styling */
+.content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+/* List Items */
+.content ul li {
+  display: flex;
+  align-items: flex-start;
+  padding: 14px 18px;
+  background: #f7f9fc;
+  border: 1px solid #e7ebf0;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  transition: all 0.35s ease;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Hover effect - corporate style */
+.content ul li:hover {
+  background: #ffffff;
+  border-color: #b74916;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+  transform: translateX(6px);
+}
+
+/* Icon Styling */
+.content ul li i {
+  font-size: 1.3rem;
+  color: #b74916 !important;
+  margin-right: 12px;
+  margin-top: 2px;
+}
+
+/* Text inside list */
+.content ul li span {
+  font-size: 1.05rem;
+  color: #111111 !important;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* AOS smooth animation refine */
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: 0.8s ease;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0px);
+}
+</style>
+
+
+
+<!-- =================== YOUR HTML (PREMIUM CORPORATE APPLIED) =================== -->
+
+<div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+  <div class="content ps-0 ps-lg-5">
+
+    <!-- WHO WE ARE -->
+    <p>Who We Are,</p>
+    <ul>
+
+      <li>
+        <i class="bi bi-check-circle-fill"></i>
+        <span>
+          Founded on principles of excellence and innovation, Arunagiri Infotech
+          is a team of dedicated professionals with deep expertise in financial
+          and educational technology.
+        </span>
+      </li>
+
+      <li>
+        <i class="bi bi-check-circle-fill"></i>
+        <span>
+          Our journey began by delivering top-notch ERP solutions for the
+          education sector, helping institutions streamline and digitize operations.
+        </span>
+      </li>
+
+      <li>
+        <i class="bi bi-check-circle-fill"></i>
+        <span>
+          Today, we are committed to addressing the unique needs of cooperative
+          societies through innovative and secure solutions.
+        </span>
+      </li>
+
+      <li>
+        <i class="bi bi-check-circle-fill"></i>
+        <span>
+          We build technology that empowers organizations to work smarter, faster, and more efficiently.
+        </span>
+      </li>
+
+      <li>
+        <i class="bi bi-check-circle-fill"></i>
+        <span>
+          Our solutions simplify complex processes, enhance transparency, and support data-driven decisions.
+        </span>
+      </li>
+
+      <li>
+        <i class="bi bi-check-circle-fill"></i>
+        <span>
+          With a continuous improvement mindset, we ensure our clients stay ahead in a fast-changing digital world.
+        </span>
+      </li>
+
+      <li>
+        <i class="bi bi-check-circle-fill"></i>
+        <span>
+          We work closely with clients to deliver customized, value-driven solutions that solve real business problems.
+        </span>
+      </li>
+
+      <li>
+        <i class="bi bi-check-circle-fill"></i>
+        <span>
+          At Arunagiri Infotech, we believe in long-term partnerships built on trust, reliability, and innovation.
+        </span>
+      </li>
+
+    </ul>
+
+    <!-- WHAT WE DO -->
+    <p>What We Do,</p>
+    <ul>
+
+      <li>
+        <i class="bi bi-check-circle-fill"></i>
+        <span>
+          We specialize in delivering enterprise-grade technology solutions for education and cooperative sectors.
+        </span>
+      </li>
+
+      <li>
+        <i class="bi bi-check-circle-fill"></i>
+        <span>
+          Initially focused on ERP platforms, we now extend our expertise into financial risk assessment and automation.
+        </span>
+      </li>
+
+      <li>
+        <i class="bi bi-check-circle-fill"></i>
+        <span>
+          COCLR, our flagship platform, provides real-time credit analysis to help lenders reduce risk and prevent defaults.
+        </span>
+      </li>
+
+      <li>
+        <i class="bi bi-check-circle-fill"></i>
+        <span>
+          Strong encryption and advanced security ensure complete protection of sensitive customer data.
+        </span>
+      </li>
+
+    </ul>
+
+  </div>
+</div>
+
       </section>
       <!-- /About Section -->
     </main>
@@ -213,7 +324,7 @@
           <div class="row gy-4">
             <div class="col-lg-6 col-md-6 footer-about">
               <a href="index.html" class="logo d-flex align-items-center">
-                <span class="sitename">Arunagiri Infotech</span>
+                <span class="sitename" style="color: #e1dde4">Arunagiri Infotech</span>
               </a>
               <div class="footer-contact pt-3">
                 <p>Sales Operations :</p>
