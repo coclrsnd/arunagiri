@@ -173,6 +173,7 @@
 /* ===== Premium Product Cards ===== */
 .products-row {
   margin-top: 10px;
+  --bs-gutter-x: 2.75rem;
 }
 
 .prod-card {
@@ -227,18 +228,18 @@
   transform: scale(1.06);
 }
 
-/* body */
+/* body — a touch more breathing room between items */
 .prod-body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 26px 28px 30px;
+  padding: 34px 32px 36px;
   text-align: left;
 }
 
 .prod-badge {
   align-self: flex-start;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -246,28 +247,28 @@
   background: rgba(var(--accent-rgb), 0.1);
   padding: 5px 12px;
   border-radius: 999px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .prod-title {
-  font-size: 1.7rem;
+  font-size: 1.85rem;
   font-weight: 800;
   color: #1a1a1a;
-  margin: 0 0 6px;
+  margin: 0 0 8px;
 }
 
 .prod-tagline {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--accent);
-  margin: 0 0 12px;
+  margin: 0 0 16px;
 }
 
 .prod-desc {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.7;
   color: #555;
-  margin: 0 0 18px;
+  margin: 0 0 22px;
 }
 
 /* feature chips */
@@ -275,18 +276,18 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 9px;
   padding: 0;
-  margin: 0 0 22px;
+  margin: 0 0 28px;
 }
 
 .prod-tags li {
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: #444;
   background: #f4f5f7;
   border-radius: 8px;
-  padding: 6px 12px;
+  padding: 7px 14px;
 }
 
 /* gradient button with sliding arrow */
@@ -296,12 +297,12 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-decoration: none;
   color: #ffffff;
   background: linear-gradient(135deg, var(--accent), rgba(var(--accent-rgb), 0.85));
-  padding: 11px 24px;
+  padding: 12px 26px;
   border-radius: 999px;
   box-shadow: 0 8px 20px rgba(var(--accent-rgb), 0.30);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -329,7 +330,7 @@
     font-size: 1.45rem;
   }
   .prod-body {
-    padding: 22px;
+    padding: 26px 24px;
   }
 }
 </style>
