@@ -95,6 +95,11 @@
 
     <main class="main">
      <div class="product-details">
+  <nav class="breadcrumb-nav" aria-label="breadcrumb">
+    <a href="products.html">Products</a>
+    <i class="bi bi-chevron-right sep"></i>
+    <span class="current">COCLR</span>
+  </nav>
   <h2>COCLR</h2>
 
   <p class="subtitle">
@@ -170,12 +175,45 @@
 <style>
 /* Premium container look */
 .product-details {
-  margin: 2rem;
-  padding: 3rem 2rem;
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
-  border: 1px solid rgba(255, 100, 50, 0.15);
+  width: 70%;
+  margin: 3.5rem auto 4rem;
+}
+
+@media (max-width: 991px) {
+  .product-details {
+    width: 90%;
+  }
+}
+
+/* Breadcrumb navigation */
+.breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.breadcrumb-nav a {
+  color: #777;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.breadcrumb-nav a:hover {
+  color: #f03c02;
+}
+
+.breadcrumb-nav .sep {
+  font-size: 0.72rem;
+  color: #bbb;
+}
+
+.breadcrumb-nav .current {
+  color: #1a1a1a;
+  font-weight: 700;
 }
 
 /* Premium title */
