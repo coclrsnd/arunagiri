@@ -603,9 +603,21 @@ h6 {
   position: relative;
 }
 
+/* slim brand accent line across the very top of the footer */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), rgba(240, 60, 2, 0.25));
+  z-index: 1;
+}
+
 .footer .footer-top {
   background-color: color-mix(in srgb, var(--background-color), white 5%);
-  padding-top: 50px;
+  padding: 60px 0 24px;
 }
 
 .footer .footer-about .logo {
@@ -632,19 +644,23 @@ h6 {
 }
 
 .footer h4 {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--heading-color);
   position: relative;
   padding-bottom: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .footer h4::after {
   content: "";
   position: absolute;
   display: block;
-  width: 20px;
-  height: 2px;
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
   background: var(--accent-color);
   bottom: 0;
   left: 0;
@@ -680,18 +696,28 @@ h6 {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   display: inline-block;
   line-height: 1;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer .footer-links ul a:hover {
   color: var(--accent-color);
+  transform: translateX(4px);
 }
 
 .footer .footer-contact p {
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  line-height: 1.75;
+  color: color-mix(in srgb, var(--default-color), transparent 22%);
+}
+
+/* highlight the phone / email values in the accent color */
+.footer .footer-contact p span {
+  color: var(--accent-color);
 }
 
 .footer .copyright {
-  padding: 30px 0;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer .copyright p {
