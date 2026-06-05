@@ -3125,3 +3125,45 @@ section,
     padding: 1.75rem;
   }
 }
+
+/*--------------------------------------------------------------
+# Why Choose Us Section
+--------------------------------------------------------------*/
+.why-choose-us.section {
+  padding: 70px 0 80px;
+  background: #ffffff;
+}
+
+.why-choose-us .why-header {
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+.why-choose-us .why-label {
+  display: inline-block;
+  color: #f03c02;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.why-choose-us .why-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.why-choose-us .why-subtext {
+  font-size: 1rem;
+  color: #6b6b6b;
+  margin: 0;
+}
+
+@media (max-width: 575px) {
+  .why-choose-us .why-title {
+    font-size: 1.6rem;
+  }
+}
