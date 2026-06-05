@@ -3162,8 +3162,75 @@ section,
   margin: 0;
 }
 
+/* alternate section background (Why Choose grid) */
+.why-choose-us--alt.section {
+  background: #f7f6f4;
+}
+
+/* About Us intro paragraphs */
+.why-choose-us .why-lead {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #555555;
+  text-align: center;
+  margin-bottom: 1.1rem;
+}
+
+.why-choose-us .why-lead:last-child {
+  margin-bottom: 0;
+}
+
+/* Feature cards */
+.why-choose-us .why-card {
+  height: 100%;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 2.25rem 1.75rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  --why-accent: #f03c02;
+  --why-accent-rgb: 240, 60, 2;
+}
+
+.why-choose-us .col-lg-4:hover .why-card,
+.why-choose-us .col-md-6:hover .why-card {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.10);
+}
+
+.why-choose-us .why-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  color: var(--why-accent);
+  background: rgba(var(--why-accent-rgb), 0.12);
+}
+
+.why-choose-us .why-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.why-choose-us .why-card-text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #666666;
+  margin: 0;
+}
+
 @media (max-width: 575px) {
   .why-choose-us .why-title {
     font-size: 1.6rem;
+  }
+  .why-choose-us .why-lead {
+    font-size: 1rem;
   }
 }
