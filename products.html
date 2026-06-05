@@ -113,63 +113,56 @@
       </div>
       <section id="testimonials" class="testimonials section">
   <div class="container">
-    <div class="row gy-4">
+    <div class="row gy-4 justify-content-center products-row">
 
-      <!-- PRODUCT CARD 1 -->
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="testimonial-item">
-          <img src="assets/img/portfolio/coop2.PNG" class="testimonial-img" alt="" />
-          <h3>COOP-CBL</h3>
-          <h4>Empowering Cooperative Lending with Confidence and Security</h4>
-          <p>
-            COCLR is a state-of-the-art loan provisioning solution designed specifically
-            for cooperative societies. By leveraging advanced risk assessment tools and
-            real-time analysis of credit histories, COCLR enables lenders to make
-            informed, data-driven decisions.
-            <a href="./coop-cbl.html" class="text-primary text-decoration-none">Read More</a>
-          </p>
-        </div>
+      <!-- PRODUCT 1 — COOP-CBL -->
+      <div class="col-lg-6" data-aos="fade-right">
+        <article class="prod-card prod-card--orange">
+          <div class="prod-media">
+            <img src="assets/img/portfolio/coop2.PNG" alt="COOP-CBL" />
+          </div>
+          <div class="prod-body">
+            <span class="prod-badge">Cooperative Lending</span>
+            <h3 class="prod-title">COOP-CBL</h3>
+            <p class="prod-tagline">Empowering Cooperative Lending with Confidence and Security</p>
+            <p class="prod-desc">
+              COCLR is a state-of-the-art loan provisioning solution built for cooperative
+              societies — leveraging advanced risk assessment and real-time credit analysis
+              to enable informed, data-driven lending decisions.
+            </p>
+            <ul class="prod-tags">
+              <li>Risk Assessment</li>
+              <li>Credit Analysis</li>
+              <li>Real-Time Data</li>
+            </ul>
+            <a href="./coop-cbl.html" class="prod-btn">Explore Product <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </article>
       </div>
 
-      <!-- PRODUCT CARD 2 -->
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="testimonial-item">
-          <img src="assets/img/portfolio/loankagazlogo.png" class="testimonial-img" alt="" />
-          <h3>LOANKAGAZ</h3>
-          <p>
-            Simplifying Loan Management for Cooperative Societies. LOANKAGAZ is Arunagiri
-            Infotech's loan documentation and management solution, designed to digitize
-            loan processing, track repayments, and maintain accurate records with
-            transparency and ease.
-            <a href="./loankagaz.html" class="text-primary text-decoration-none">Read More</a>
-          </p>
-        </div>
-      </div>
-
-      <!-- PRODUCT CARD 3 -->
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="testimonial-item">
-          <img src="assets/img/portfolio/parent1.PNG" class="testimonial-img" alt="" />
-          <h3>PARENT APP</h3>
-          <p>
-            Arunagiri Infotech offers a white-labeled Android application designed for
-            parents. This app enhances communication and engagement between the school
-            and parents.
-            <a href="./parentapp.html" class="text-primary text-decoration-none">Read More</a>
-          </p>
-        </div>
-      </div>
-
-      <!-- PRODUCT CARD 4 -->
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="testimonial-item">
-          <!-- <img src="assets/img/portfolio/vidhya1.PNG" class="testimonial-img" alt="" /> -->
-          <h3>HIRE MY TEACHER</h3>
-          <p>
-            An upcoming product
-            <!-- <a href="./hiremyteacher.html" class="text-primary text-decoration-none">Read More</a> -->
-          </p>
-        </div>
+      <!-- PRODUCT 2 — LOANKAGAZ -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <article class="prod-card prod-card--teal">
+          <div class="prod-media">
+            <img src="assets/img/portfolio/loankagazlogo.png" alt="LOANKAGAZ" />
+          </div>
+          <div class="prod-body">
+            <span class="prod-badge">Loan Management</span>
+            <h3 class="prod-title">LOANKAGAZ</h3>
+            <p class="prod-tagline">Simplifying Loan Management for Cooperative Societies</p>
+            <p class="prod-desc">
+              LOANKAGAZ is Arunagiri Infotech's loan documentation and management solution —
+              digitizing loan processing, tracking repayments, and maintaining accurate
+              records with full transparency and ease.
+            </p>
+            <ul class="prod-tags">
+              <li>Loan Processing</li>
+              <li>Repayment Tracking</li>
+              <li>Digital Records</li>
+            </ul>
+            <a href="./loankagaz.html" class="prod-btn">Explore Product <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </article>
       </div>
 
     </div>
@@ -177,98 +170,166 @@
 </section>
 
 <style>
-/* PREMIUM PRODUCT / TESTIMONIAL CARD */
-.testimonial-item {
+/* ===== Premium Product Cards ===== */
+.products-row {
+  margin-top: 10px;
+}
+
+.prod-card {
+  --accent: #f03c02;
+  --accent-rgb: 240, 60, 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background: #ffffff;
-  padding: 30px;
-  border-radius: 18px;
-  text-align: left;
-  position: relative;
+  border-radius: 22px;
   overflow: hidden;
-  border: 1px solid rgba(255, 132, 0, 0.15);
-
-  /* Soft glass shadow */
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
-
-  /* Smooth movement */
-  transition: all 0.45s ease;
-  will-change: transform;
-  backface-visibility: hidden;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Floating slide-up + glow (triggered from the stationary column to avoid hover flicker) */
-#testimonials .col-lg-6:hover .testimonial-item {
-  transform: translateY(-14px);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
-  border-color: rgba(0, 0, 0, 0.08);
+.prod-card--orange {
+  --accent: #f03c02;
+  --accent-rgb: 240, 60, 2;
 }
 
-/* Gradient glow overlay */
-.testimonial-item::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #ff7a00, #ff4500);
-  opacity: 0;
-  transition: opacity 0.45s ease;
-  z-index: 0;
+.prod-card--teal {
+  --accent: #1a8a5a;
+  --accent-rgb: 26, 138, 90;
 }
 
-/* Glow appears on hover */
-#testimonials .col-lg-6:hover .testimonial-item::before {
-  opacity: 0.12;
+.prod-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 26px 55px rgba(var(--accent-rgb), 0.20);
 }
 
-/* Content above glow */
-.testimonial-item * {
-  position: relative;
-  z-index: 2;
+/* media zone with soft accent-tinted background */
+.prod-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 210px;
+  padding: 28px;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(var(--accent-rgb), 0.14), transparent 60%),
+    linear-gradient(135deg, rgba(var(--accent-rgb), 0.10), rgba(var(--accent-rgb), 0.02));
 }
 
-/* Image premium glow + zoom */
-.testimonial-img {
-  width: 100%;
-  border-radius: 14px;
-  transition: all 0.45s ease;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+.prod-media img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.45s ease;
 }
 
-/* Enhance image on hover */
-#testimonials .col-lg-6:hover .testimonial-img {
+.prod-card:hover .prod-media img {
   transform: scale(1.06);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
 }
 
-/* Headings */
-.testimonial-item h3 {
-  font-size: 1.7rem;
+/* body */
+.prod-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 26px 28px 30px;
+  text-align: left;
+}
+
+.prod-badge {
+  align-self: flex-start;
+  font-size: 0.72rem;
   font-weight: 700;
-  color: #222;
-  margin-top: 18px;
-}
-
-.testimonial-item h4 {
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: #555;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.1);
+  padding: 5px 12px;
+  border-radius: 999px;
   margin-bottom: 12px;
 }
 
-/* Paragraph text */
-.testimonial-item p {
-  font-size: 0.97rem;
-  color: #333;
-  line-height: 1.55;
+.prod-title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 6px;
 }
 
-/* Touch / Mobile press effect */
-@media (hover: none) {
-  .testimonial-item:active {
-    transform: translateY(-10px) scale(0.98);
-    border-color: rgba(255, 94, 0, 0.45);
+.prod-tagline {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 12px;
+}
+
+.prod-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0 0 18px;
+}
+
+/* feature chips */
+.prod-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0 0 22px;
+}
+
+.prod-tags li {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #444;
+  background: #f4f5f7;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+/* gradient button with sliding arrow */
+.prod-btn {
+  margin-top: auto;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--accent), rgba(var(--accent-rgb), 0.85));
+  padding: 11px 24px;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(var(--accent-rgb), 0.30);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prod-btn i {
+  transition: transform 0.3s ease;
+}
+
+.prod-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(var(--accent-rgb), 0.42);
+}
+
+.prod-btn:hover i {
+  transform: translateX(4px);
+}
+
+@media (max-width: 575px) {
+  .prod-media {
+    height: 180px;
+    padding: 22px;
   }
-  .testimonial-item:active::before {
-    opacity: 0.20;
+  .prod-title {
+    font-size: 1.45rem;
+  }
+  .prod-body {
+    padding: 22px;
   }
 }
 </style>
@@ -318,8 +379,6 @@
                <ul>
                 <li><a href="coop-cbl.html">COCLR</a></li>
                 <li><a href="loankagaz.html">LOANKAGAZ</a></li>
-                <li><a href="parentapp.html">PARENT APP</a></li>
-                <!-- <li><a href="#hiremyteacher">HIRE MY TEACHER</a></li> -->
               </ul>
             </div>
           </div>
