@@ -134,9 +134,9 @@
 
   <!-- ================= ABOUT CAREER ================= -->
   <section class="career-section container">
-    <div class="row align-items-center">
+    <div class="row justify-content-center">
 
-      <div class="col-md-6">
+      <div class="col-lg-9 text-center">
         <p class="career-title">
           Grow Your Career with <span class="career-highlight">Arunagiri Infotech</span>
         </p>
@@ -146,20 +146,15 @@
         </p>
 
         <p class="career-text">
-          At Arunagiri Infotech, we thrive on creativity, teamwork, and pioneering solutions 
-          that drive meaningful impact. As a frontrunner in advanced technology, we seek 
+          At Arunagiri Infotech, we thrive on creativity, teamwork, and pioneering solutions
+          that drive meaningful impact. As a frontrunner in advanced technology, we seek
           passionate and skilled professionals to join us in shaping the future.
         </p>
 
         <p class="career-text">
-          If you're eager to advance your career in a dynamic and fast-evolving environment, 
+          If you're eager to advance your career in a dynamic and fast-evolving environment,
           Arunagiri Infotech is your ideal destination.
         </p>
-      </div>
-
-      <div class="col-md-6 career-images d-flex gap-3">
-        <img src="../assets/img/career/career1.jpg" alt="Career Image 1" />
-        <img src="../assets/img/career/career2.jpg" alt="Career Image 2" />
       </div>
 
     </div>
@@ -170,7 +165,7 @@
     <div class="row align-items-center">
 
       <div class="col-md-6">
-        <img src="../assets/img/career/career3.jpg" class="why-img" alt="career3" />
+        <img src="../assets/img/about3.jpg" class="why-img" alt="career3" />
       </div>
 
       <div class="col-md-6">
@@ -270,14 +265,22 @@
 /* ================= CALL TO ACTION ================= */
 .call-to-action {
   padding: 4rem 0;
-  background: linear-gradient(to right, #ffe6de, #fff8f4);
-  border-bottom: 1px solid rgba(255, 127, 80, 0.25);
+  background: #fff6f1;
+  border-bottom: 1px solid rgba(240, 60, 2, 0.12);
 }
 
 .call-to-action h3 {
   font-size: 2.2rem;
   font-weight: 800;
-  color: #ff6a3d;
+  color: #f03c02;
+}
+
+.call-to-action p {
+  font-size: 1.08rem;
+  color: #5a5a5a;
+  line-height: 1.7;
+  margin-top: 0.8rem;
+  margin-bottom: 0;
 }
 
 /* ================= CAREER GENERAL TEXT ================= */
@@ -287,42 +290,44 @@
 }
 
 .career-title {
+  font-family: var(--heading-font);
   font-size: 2rem;
   font-weight: 800;
+  color: #1a1a1a;
 }
 
 .career-highlight {
-  color: coral;
+  color: #f03c02;
 }
 
 .career-subtitle {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 600;
+  color: #1a1a1a;
   margin-bottom: 1rem;
 }
 
 .career-text {
-  font-size: 1.1rem;
-  color: #444;
-  line-height: 1.65;
-}
-
-.career-images img {
-  width: 48%;
-  border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  transition: 0.3s ease;
-}
-
-.career-images img:hover {
-  transform: scale(1.03);
+  font-size: 1.08rem;
+  color: #555;
+  line-height: 1.7;
 }
 
 /* WHY JOIN US */
 .why-img {
   width: 100%;
-  border-radius: 14px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+@media (max-width: 767px) {
+  .why-img {
+    height: 260px;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .grid-container {
@@ -332,9 +337,9 @@
 }
 
 .grid-item p:first-child {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: coral;
+  color: #f03c02;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -353,20 +358,22 @@
 
 /* ================= JOB LISTINGS ================= */
 .job-card {
-  background: #fff5ef;
+  height: 100%;
+  background: #ffffff;
   border-radius: 16px;
-  padding: 1.8rem;
-  border: 1px solid rgba(255, 127, 80, 0.25);
-  transition: all 0.35s ease;
+  padding: 1.9rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .job-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(255, 127, 80, 0.28);
+  box-shadow: 0 18px 40px rgba(240, 60, 2, 0.14);
 }
 
 .job-card h3 {
-  color: #333;
+  color: #1a1a1a;
   font-weight: 700;
 }
 
@@ -374,25 +381,32 @@
   display: flex;
   align-items: center;
   margin-bottom: 0.6rem;
+  color: #555;
 }
 
 .list1 li i {
-  color: coral;
+  color: #f03c02;
   font-size: 1.2rem;
   margin-right: 6px;
 }
 
 .applyBtn a {
-  background: coral;
-  padding: 10px 20px;
-  border-radius: 30px;
-  color: white;
-  font-weight: 600;
-  transition: 0.3s ease;
+  display: inline-block;
+  background: #f03c02;
+  padding: 11px 26px;
+  border-radius: 999px;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(240, 60, 2, 0.28);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .applyBtn a:hover {
-  background: #ff5c2a;
+  background: #d8350a;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(240, 60, 2, 0.4);
 }
 </style>
 
