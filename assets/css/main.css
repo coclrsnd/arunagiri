@@ -244,22 +244,52 @@ h6 {
 }
 
 .header .topbar {
-  background-color: var(--background-color);
-  height: 40px;
+  /* refined near-white bar with a hairline divider under it */
+  background-color: #fbfbfb;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  height: 42px;
   padding: 0;
-  font-size: 14px;
+  font-size: 13.5px;
   transition: all 0.5s;
+}
+
+/* push the contact info to the right for an intentional, editorial look */
+.header .topbar .contact-info {
+  margin-left: auto;
 }
 
 .header .topbar .contact-info i {
   font-style: normal;
+  font-size: 15px;
+  color: var(--accent-color);
+}
+
+/* thin divider between the email and the phone */
+.header .topbar .contact-info .bi-phone {
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+  /* muted color for the "/" separator text between the two numbers */
+  color: #b9b9b9;
+}
+
+/* keep the phone icon glyph in the brand accent color */
+.header .topbar .contact-info .bi-phone::before {
   color: var(--accent-color);
 }
 
 .header .topbar .contact-info i a,
 .header .topbar .contact-info i span {
-  padding-left: 5px;
-  color: var(--default-color);
+  padding-left: 7px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: #3a3a3a;
+  transition: color 0.25s ease;
+}
+
+/* subtle separator styling for the two phone numbers */
+.header .topbar .contact-info .bi-phone a {
+  font-variant-numeric: tabular-nums;
 }
 
 @media (max-width: 575px) {
@@ -277,8 +307,8 @@ h6 {
 }
 
 .header .topbar .contact-info i a:hover {
-  color: var(--default-color);
-  text-decoration: underline;
+  color: var(--accent-color);
+  text-decoration: none;
 }
 
 .header .topbar .social-links a {
