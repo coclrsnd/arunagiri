@@ -45,10 +45,10 @@
 }
 
 .dark-background {
-  --background-color: #060606;
+  --background-color: #15161a;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #252525;
+  --surface-color: #1f2026;
   --contrast-color: #ffffff;
 }
 
@@ -710,18 +710,33 @@ h6 {
   color: color-mix(in srgb, var(--default-color), transparent 22%);
 }
 
-/* highlight the phone / email values in the accent color */
+/* phone / email values in clean white (not the loud orange) */
 .footer .footer-contact p span {
-  color: var(--accent-color);
+  color: #ffffff;
 }
 
 .footer .copyright {
-  padding: 24px 0;
+  padding: 22px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 13.5px;
+  letter-spacing: 0.2px;
+  color: color-mix(in srgb, var(--default-color), transparent 45%);
+}
+
+/* center the copyright row (no social block on the right) */
+.footer .copyright > .container {
+  justify-content: center !important;
 }
 
 .footer .copyright p {
   margin-bottom: 0;
+}
+
+/* copyright brand name in clean white (not the loud orange) */
+.footer .copyright strong,
+.footer .copyright strong span {
+  color: #ffffff;
+  font-weight: 700;
 }
 
 .footer .credits {
