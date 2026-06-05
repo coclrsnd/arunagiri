@@ -109,28 +109,56 @@
     risks, prevent defaults, and enhance overall financial health.
   </p>
 
-  <p class="section-heading">With COCLR, cooperative societies benefit from:</p>
+  <p class="section-heading">Key Features of COCLR</p>
 
   <ul class="premium-list">
     <li>
-      <h5>Comprehensive Risk Assessment</h5>
-      <p>Gain deep insights into each loan applicant's financial behavior and credit history.</p>
+      <h5>Liability Verification Integration</h5>
+      <p>Verify customer liabilities and borrowing history before loan sanction to support informed lending decisions.</p>
     </li>
 
     <li>
-      <h5>Real-Time Analysis</h5>
-      <p>Detect early warning signs and take preemptive action to avoid potential financial crises.</p>
+      <h5>Surety Management</h5>
+      <p>Maintain complete records of sureties, guarantors, and their associated loan obligations.</p>
     </li>
 
     <li>
-      <h5>Data Security</h5>
-      <p>Ensure the utmost confidentiality and protection of sensitive customer information through robust encryption protocols.</p>
+      <h5>Loan Workflow Tracking</h5>
+      <p>Track every stage of the loan process including application, verification, recommendation, approval, documentation, and disbursement.</p>
     </li>
 
     <li>
-      <h5>Streamlined Operations</h5>
-      <p>Seamlessly integrate COCLR into existing frameworks to enhance efficiency and promote responsible lending practices.</p>
+      <h5>Digital Document Repository</h5>
+      <p>Store and retrieve all loan-related documents securely from a centralized location.</p>
     </li>
+
+    <li>
+      <h5>Multi-Level Approval System</h5>
+      <p>Configure approval workflows for field officers, branch managers, secretaries, CEOs, and committee members.</p>
+    </li>
+
+    <li>
+      <h5>Loan Status Monitoring</h5>
+      <p>Monitor pending, approved, rejected, disbursed, overdue, and closed loan accounts through a single dashboard.</p>
+    </li>
+
+    <li>
+      <h5>Audit-Friendly Records</h5>
+      <p>Maintain complete audit trails of approvals, modifications, and document generation activities.</p>
+    </li>
+  </ul>
+
+  <p class="section-heading">Benefits</p>
+
+  <ul class="benefits-grid">
+    <li>Faster Loan Processing</li>
+    <li>Reduced Manual Documentation</li>
+    <li>Improved Transparency</li>
+    <li>Better Credit Assessment</li>
+    <li>Centralized Data Management</li>
+    <li>Enhanced Compliance</li>
+    <li>Increased Operational Efficiency</li>
+    <li>Secure Digital Record Keeping</li>
   </ul>
 
   <p class="footer-text">
@@ -213,6 +241,38 @@
   margin-bottom: 0.3rem;
   font-weight: 700;
   color: #222;
+}
+
+/* Benefits grid */
+.benefits-grid {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.benefits-grid li {
+  position: relative;
+  padding: 12px 16px 12px 44px;
+  background: #fff6f1;
+  border: 1px solid rgba(240, 60, 2, 0.12);
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #333;
+}
+
+.benefits-grid li::before {
+  content: "\2713";
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #f03c02;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 /* Footer paragraph */
