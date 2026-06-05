@@ -116,7 +116,7 @@
     <div class="row gy-4 justify-content-center products-row">
 
       <!-- PRODUCT 1 — COOP-CBL -->
-      <div class="col-lg-6" data-aos="fade-right">
+      <div class="col-lg-6" data-aos="fade-up">
         <article class="prod-card prod-card--orange">
           <div class="prod-media">
             <img src="assets/img/portfolio/coop2.PNG" alt="COOP-CBL" />
@@ -141,7 +141,7 @@
       </div>
 
       <!-- PRODUCT 2 — LOANKAGAZ -->
-      <div class="col-lg-6" data-aos="fade-left">
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
         <article class="prod-card prod-card--teal">
           <div class="prod-media">
             <img src="assets/img/portfolio/loankagazlogo.png" alt="LOANKAGAZ" />
@@ -173,7 +173,12 @@
 /* ===== Premium Product Cards ===== */
 .products-row {
   margin-top: 10px;
-  --bs-gutter-x: 2.75rem;
+}
+
+/* add gap between the 2 cards via column padding (no row overflow) */
+.products-row > [class*="col-"] {
+  padding-left: 1.1rem;
+  padding-right: 1.1rem;
 }
 
 .prod-card {
@@ -188,6 +193,8 @@
   overflow: hidden;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  will-change: transform;
+  isolation: isolate;
 }
 
 .prod-card--orange {
@@ -201,7 +208,7 @@
 }
 
 .prod-card:hover {
-  transform: translateY(-12px);
+  transform: translateY(-6px);
   box-shadow: 0 26px 55px rgba(var(--accent-rgb), 0.20);
 }
 

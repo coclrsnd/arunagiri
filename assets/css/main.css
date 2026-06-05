@@ -57,6 +57,18 @@
   scroll-behavior: smooth;
 }
 
+/* Allow scrolling but hide the visible scrollbar (no layout shift, no jitter) */
+html {
+  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;   /* old IE / legacy Edge */
+}
+
+html::-webkit-scrollbar {     /* Chrome, Safari, new Edge */
+  width: 0;
+  height: 0;
+  display: none;
+}
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -64,6 +76,8 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  /* clip (not hidden) so the sticky header isn't turned into a scroll container */
+  overflow-x: clip;
 }
 
 a {
