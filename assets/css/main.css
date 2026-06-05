@@ -2680,6 +2680,29 @@ section,
   margin-bottom: 0;
 }
 
+/* Reach image card — transparent so a transparent PNG shows through cleanly */
+.stats .reach-image-card {
+  position: relative;
+  height: 100%;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.stats .reach-image-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* contain keeps a transparent graphic/logo fully visible without cropping */
+  object-fit: contain;
+}
+
 /* Stat card */
 .stats .stat-card {
   position: relative;
@@ -2712,7 +2735,7 @@ section,
 
 .stats .stat-card:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 20px 40px rgba(var(--stat-accent-rgb), 0.28);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
 /* Icon inside circular background with pulsing ring */

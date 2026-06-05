@@ -217,78 +217,93 @@
       </p>
     </div>
 
-    <!-- Stat Cards -->
-    <div class="row gy-4 justify-content-center">
+    <!-- Two-column layout: image card (left) + 2x2 stat grid (right) -->
+    <div class="row gy-4 align-items-stretch">
 
-      <!-- Stat 1 -->
-      <div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="stat-card stat-card--orange">
-          <span class="stat-dot stat-dot--1"></span>
-          <span class="stat-dot stat-dot--2"></span>
-          <div class="stat-icon-wrap">
-            <i class="bi bi-buildings stat-icon"></i>
-          </div>
-          <div class="stat-number">
-            <span class="stat-count" data-target="570">0</span><span class="stat-suffix">+</span>
-          </div>
-          <div class="stat-label">Cooperative Societies</div>
-          <div class="reach-bar" aria-hidden="true">
-            <span class="reach-bar-fill"></span>
-          </div>
+      <!-- LEFT: Image card (matches the stat-card family) -->
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="reach-image-card">
+          <!-- TODO: replace coop2.png with the final "Our Reach" image -->
+          <img src="assets/img/portfolio/authblue_transparent_hd.png" alt="Our reach across Karnataka">
         </div>
       </div>
 
-      <!-- Stat 2 -->
-      <div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="stat-card stat-card--orange">
-          <span class="stat-dot stat-dot--1"></span>
-          <span class="stat-dot stat-dot--2"></span>
-          <div class="stat-icon-wrap">
-            <i class="bi bi-file-earmark-text stat-icon"></i>
-          </div>
-          <div class="stat-number">
-            <span class="stat-count" data-target="30000">0</span><span class="stat-suffix">+</span>
-          </div>
-          <div class="stat-label">Loan Accounts</div>
-          <div class="reach-bar" aria-hidden="true">
-            <span class="reach-bar-fill"></span>
-          </div>
-        </div>
-      </div>
+      <!-- RIGHT: 2x2 stat grid -->
+      <div class="col-lg-6">
+        <div class="row g-5 h-100">
 
-      <!-- Stat 3 -->
-      <div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="stat-card stat-card--orange">
-          <span class="stat-dot stat-dot--1"></span>
-          <span class="stat-dot stat-dot--2"></span>
-          <div class="stat-icon-wrap">
-            <i class="bi bi-search stat-icon"></i>
+          <!-- Stat 1 -->
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="stat-card stat-card--orange">
+              <span class="stat-dot stat-dot--1"></span>
+              <span class="stat-dot stat-dot--2"></span>
+              <div class="stat-icon-wrap">
+                <i class="bi bi-buildings stat-icon"></i>
+              </div>
+              <div class="stat-number">
+                <span class="stat-count" data-target="570">0</span><span class="stat-suffix">+</span>
+              </div>
+              <div class="stat-label">Cooperative Societies</div>
+              <div class="reach-bar" aria-hidden="true">
+                <span class="reach-bar-fill"></span>
+              </div>
+            </div>
           </div>
-          <div class="stat-number">
-            <span class="stat-count" data-target="64000">0</span><span class="stat-suffix">+</span>
-          </div>
-          <div class="stat-label">Liability Searches</div>
-          <div class="reach-bar" aria-hidden="true">
-            <span class="reach-bar-fill"></span>
-          </div>
-        </div>
-      </div>
 
-      <!-- Stat 4 -->
-      <div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-delay="400">
-        <div class="stat-card stat-card--teal">
-          <span class="stat-dot stat-dot--1"></span>
-          <span class="stat-dot stat-dot--2"></span>
-          <div class="stat-icon-wrap">
-            <i class="bi bi-geo-alt stat-icon"></i>
+          <!-- Stat 2 -->
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-card stat-card--orange">
+              <span class="stat-dot stat-dot--1"></span>
+              <span class="stat-dot stat-dot--2"></span>
+              <div class="stat-icon-wrap">
+                <i class="bi bi-file-earmark-text stat-icon"></i>
+              </div>
+              <div class="stat-number">
+                <span class="stat-count" data-target="30000">0</span><span class="stat-suffix">+</span>
+              </div>
+              <div class="stat-label">Loan Accounts</div>
+              <div class="reach-bar" aria-hidden="true">
+                <span class="reach-bar-fill"></span>
+              </div>
+            </div>
           </div>
-          <div class="stat-number">
-            <span class="stat-growing">Growing</span>
+
+          <!-- Stat 3 -->
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-card stat-card--orange">
+              <span class="stat-dot stat-dot--1"></span>
+              <span class="stat-dot stat-dot--2"></span>
+              <div class="stat-icon-wrap">
+                <i class="bi bi-search stat-icon"></i>
+              </div>
+              <div class="stat-number">
+                <span class="stat-count" data-target="64000">0</span><span class="stat-suffix">+</span>
+              </div>
+              <div class="stat-label">Liability Searches</div>
+              <div class="reach-bar" aria-hidden="true">
+                <span class="reach-bar-fill"></span>
+              </div>
+            </div>
           </div>
-          <div class="stat-label">Across Karnataka</div>
-          <div class="reach-bar" aria-hidden="true">
-            <span class="reach-bar-fill"></span>
+
+          <!-- Stat 4 -->
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="stat-card stat-card--teal">
+              <span class="stat-dot stat-dot--1"></span>
+              <span class="stat-dot stat-dot--2"></span>
+              <div class="stat-icon-wrap">
+                <i class="bi bi-geo-alt stat-icon"></i>
+              </div>
+              <div class="stat-number">
+                <span class="stat-growing">Growing</span>
+              </div>
+              <div class="stat-label">Across Karnataka</div>
+              <div class="reach-bar" aria-hidden="true">
+                <span class="reach-bar-fill"></span>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
 
