@@ -27,11 +27,6 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <style>
-    .client-logo{
-      box-shadow: 1px 1px 5px coral;
-    }
-  </style>
 </head>
 
 <body class="index-page">
@@ -434,87 +429,72 @@
 </section>
 
 <!-- ===================== CLIENTS SECTION ===================== -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  
-  <!-- Bootstrap (for grid only) -->
+<section id="clients" class="clients-section section">
+  <div class="container">
 
-  <!-- Custom CSS -->
-  <style>
-   
-    .client-img {
-      width: 200px;
-      height: 120px;
-      padding: 20px;
-      background: #ffffff;
-      object-fit: contain;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s ease;
-    }
+    <!-- Section Header -->
+    <div class="clients-header text-center" data-aos="fade-up">
+      <span class="clients-label">Our Clients</span>
+      <h2 class="clients-title">Trusted by Cooperative Societies</h2>
+      <p class="clients-subtext">
+        Proudly partnering with cooperative societies across Karnataka.
+      </p>
+    </div>
 
-    .client-img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
-    }
+    <!-- Logo Grid -->
+    <div class="row g-4 justify-content-center">
 
-    /* Mobile Responsive */
-    @media (max-width: 576px) {
-      .client-img {
-        width: 160px;
-        height: 100px;
-        padding: 15px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- Clients Section -->
-  <section id="clients" class="clients-section">
-    <div class="container">
-      <div class="row g-4 justify-content-center">
-
-        <div class="col-xl-3 col-md-4 col-sm-6 client-logo">
+      <div class="col-xl-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="client-card">
           <img src="assets/img/clients/JanathaSSSNiSindhanur.jpeg" class="client-img" alt="Client Logo">
         </div>
+      </div>
 
-        <div class="col-xl-3 col-md-4 col-sm-6 client-logo">
-          <img src="assets/img/clients/TSSSNS.jpg" class="client-img" alt="Client Logo">
+      <div class="col-xl-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="150">
+        <div class="client-card">
+          <img src="assets/img/clients/TSSSNS.png" class="client-img" alt="Client Logo">
         </div>
+      </div>
 
-        <div class="col-xl-3 col-md-4 col-sm-6 client-logo">
+      <div class="col-xl-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="client-card">
           <img src="assets/img/clients/YAPSSSNSindhanur.jpeg" class="client-img" alt="Client Logo">
         </div>
+      </div>
 
-        <div class="col-xl-3 col-md-4 col-sm-6 client-logo">
+      <div class="col-xl-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="250">
+        <div class="client-card">
           <img src="assets/img/clients/SNEHASAGARASSSNiSindhanur.jpg" class="client-img" alt="Client Logo">
         </div>
+      </div>
 
-        <div class="col-xl-3 col-md-4 col-sm-6 client-logo">
+      <div class="col-xl-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="client-card">
           <img src="assets/img/clients/APSSSNMASKI.jpeg" class="client-img" alt="Client Logo">
         </div>
+      </div>
 
-        <div class="col-xl-3 col-md-4 col-sm-6 client-logo">
+      <div class="col-xl-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="150">
+        <div class="client-card">
           <img src="assets/img/clients/CCSSSNiSindhanur.jpeg" class="client-img" alt="Client Logo">
         </div>
+      </div>
 
-        <div class="col-xl-3 col-md-4 col-sm-6 client-logo">
+      <div class="col-xl-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="client-card">
           <img src="assets/img/clients/SSSSSSNM.jpeg" class="client-img" alt="Client Logo">
         </div>
-
-        <div class="col-xl-3 col-md-4 col-sm-6 client-logo">
-          <img src="assets/img/clients/YAPSSSNSindhanur.jpeg" class="client-img" alt="Client Logo">
-        </div>
-
       </div>
-    </div>
-  </section>
 
-</body>
-</html>
+      <div class="col-xl-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="250">
+        <div class="client-card">
+          <img src="assets/img/clients/SAPTAGIRIPSSSNiSindhanur.png" class="client-img" alt="Client Logo">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <style>
 
@@ -611,22 +591,80 @@
 /* ===================== CLIENTS ===================== */
 
 .clients-section {
-  padding: 50px 0;
+  padding: 70px 0 80px;
+  background: #ffffff;
 }
 
-.client-logo {
-  text-align: center;
+.clients-header {
+  max-width: 700px;
+  margin: 0 auto 44px;
 }
 
+.clients-label {
+  display: inline-block;
+  color: #f03c02;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.clients-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.clients-subtext {
+  font-size: 1rem;
+  color: #6b6b6b;
+  margin: 0;
+}
+
+/* uniform premium logo cards */
+.client-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 130px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.client-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.10);
+}
+
+/* grayscale logos that colorize on hover */
 .client-img {
-  max-width: 50%;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  transition: 0.3s ease;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.78;
+  transition: filter 0.35s ease, opacity 0.35s ease;
 }
 
-.client-img:hover {
-  transform: scale(1.05);
+.client-card:hover .client-img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+@media (max-width: 576px) {
+  .client-card {
+    height: 110px;
+    padding: 16px;
+  }
+  .clients-title {
+    font-size: 1.6rem;
+  }
 }
 
 </style>
