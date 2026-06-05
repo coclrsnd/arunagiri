@@ -78,6 +78,8 @@ body {
   font-family: var(--default-font);
   /* clip (not hidden) so the sticky header isn't turned into a scroll container */
   overflow-x: clip;
+  /* stop the browser from re-adjusting scroll when the topbar collapses (no shake) */
+  overflow-anchor: none;
 }
 
 a {
@@ -237,7 +239,8 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  transition: all 0.5s;
+  /* animate only visuals, not height — prevents the scroll "shift/shake" */
+  transition: box-shadow 0.4s ease, background-color 0.4s ease;
   z-index: 997;
   background-color: var(--background-color);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
@@ -250,7 +253,8 @@ h6 {
   height: 42px;
   padding: 0;
   font-size: 13.5px;
-  transition: all 0.5s;
+  /* snap instantly on scroll (no animated height collapse) */
+  transition: none;
 }
 
 /* push the contact info to the right for an intentional, editorial look */
