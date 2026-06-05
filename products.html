@@ -207,7 +207,8 @@
   --accent-rgb: 26, 138, 90;
 }
 
-.prod-card:hover {
+/* trigger the lift from the stationary column so the hover area never moves (no flicker) */
+.products-row > [class*="col-"]:hover .prod-card {
   transform: translateY(-6px);
   box-shadow: 0 26px 55px rgba(var(--accent-rgb), 0.20);
 }
@@ -231,7 +232,7 @@
   transition: transform 0.45s ease;
 }
 
-.prod-card:hover .prod-media img {
+.products-row > [class*="col-"]:hover .prod-media img {
   transform: scale(1.06);
 }
 
@@ -320,6 +321,7 @@
 }
 
 .prod-btn:hover {
+  color: #ffffff;
   transform: translateY(-3px);
   box-shadow: 0 12px 26px rgba(var(--accent-rgb), 0.42);
 }
