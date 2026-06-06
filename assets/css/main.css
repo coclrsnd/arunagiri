@@ -2794,7 +2794,7 @@ section,
 
 .stats .reach-image-card img {
   display: block;
-  width: 100%;
+  width: 85%;
   height: 100%;
   /* contain keeps a transparent graphic/logo fully visible without cropping */
   object-fit: contain;
