@@ -22,7 +22,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #4d4643; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #2b2320; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #ef8009; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #155E75; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -336,8 +336,15 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 46px;
+  width: auto;
   margin-right: 8px;
+}
+
+@media (max-width: 575px) {
+  .header .logo img {
+    max-height: 38px;
+  }
 }
 
 .header .logo h1 {
@@ -615,7 +622,7 @@ h6 {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent-color), rgba(239, 128, 9, 0.25));
+  background: linear-gradient(90deg, var(--accent-color), rgba(21, 94, 117, 0.25));
   z-index: 1;
 }
 
@@ -2728,7 +2735,7 @@ section,
   position: relative;
   overflow: hidden;
   padding: 80px 0;
-  background: linear-gradient(135deg, #fff5f2 0%, #f0f4ff 100%);
+  background: linear-gradient(135deg, #eef5f7 0%, #f5f9fb 100%);
 }
 
 /* Decorative radial glow blobs removed */
@@ -2749,7 +2756,7 @@ section,
 
 .stats .stats-label {
   display: inline-block;
-  color: #ef8009;
+  color: #155E75;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -2809,13 +2816,13 @@ section,
   height: 100%;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   /* default accent (orange) */
-  --stat-accent: #ef8009;
-  --stat-accent-rgb: 239, 128, 9;
+  --stat-accent: #155E75;
+  --stat-accent-rgb: 21, 94, 117;
 }
 
 .stats .stat-card--orange {
-  --stat-accent: #ef8009;
-  --stat-accent-rgb: 239, 128, 9;
+  --stat-accent: #155E75;
+  --stat-accent-rgb: 21, 94, 117;
 }
 
 .stats .stat-card--teal {
@@ -2889,7 +2896,7 @@ section,
 .stats .stat-suffix {
   font-size: 2.4rem;
   font-weight: 800;
-  color: #ef8009;
+  color: #155E75;
   line-height: 1.15;
 }
 
@@ -3017,7 +3024,7 @@ section,
 
 .products .products-label {
   display: inline-block;
-  color: #ef8009;
+  color: #155E75;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -3046,8 +3053,8 @@ section,
   height: 100%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   /* accent applied per-variant below */
-  --product-accent: #ef8009;
-  --product-accent-rgb: 239, 128, 9;
+  --product-accent: #155E75;
+  --product-accent-rgb: 21, 94, 117;
 }
 
 .products .product-card:hover {
@@ -3056,8 +3063,8 @@ section,
 }
 
 .products .product-card--orange {
-  --product-accent: #ef8009;
-  --product-accent-rgb: 239, 128, 9;
+  --product-accent: #155E75;
+  --product-accent-rgb: 21, 94, 117;
 }
 
 .products .product-card--teal {
@@ -3145,7 +3152,7 @@ section,
 
 .why-choose-us .why-label {
   display: inline-block;
-  color: #ef8009;
+  color: #155E75;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -3168,7 +3175,7 @@ section,
 
 /* alternate section background (Why Choose grid) */
 .why-choose-us--alt.section {
-  background: #f7f6f4;
+  background: #f1f5f6;
 }
 
 /* About Us intro paragraphs */
@@ -3193,8 +3200,8 @@ section,
   text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
-  --why-accent: #ef8009;
-  --why-accent-rgb: 239, 128, 9;
+  --why-accent: #155E75;
+  --why-accent-rgb: 21, 94, 117;
 }
 
 .why-choose-us .col-lg-4:hover .why-card,
