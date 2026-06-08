@@ -125,7 +125,7 @@
         </div>
 
         <div class="col-xl-3 text-center text-xl-end mt-4 mt-xl-0">
-          <a class="cta-premium-btn" href="contact.html">Click For Demo <i class="bi bi-arrow-right"></i></a>
+          <a class="cta-premium-btn" role="button" data-bs-toggle="modal" data-bs-target="#demoModal">Click For Demo <i class="bi bi-arrow-right"></i></a>
         </div>
 
       </div>
@@ -205,6 +205,7 @@
   font-weight: 700;
   font-size: 1.05rem;
   text-decoration: none;
+  cursor: pointer;
   box-shadow: 0 10px 24px rgba(21, 94, 117, 0.28);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
@@ -766,8 +767,108 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
+  <!-- ===================== Demo Request Modal ===================== -->
+  <div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content demo-modal">
+        <div class="modal-header">
+          <div>
+            <span class="demo-eyebrow"><i class="bi bi-stars"></i> Get Started</span>
+            <h5 class="modal-title" id="demoModalTitle">Request a Demo</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <form id="demoForm" novalidate>
+            <div class="mb-3">
+              <label class="form-label" for="demoName">Name</label>
+              <input type="text" class="form-control" id="demoName" name="name" placeholder="Your name" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="demoSociety">Society Name</label>
+              <input type="text" class="form-control" id="demoSociety" name="society" placeholder="Cooperative society name" required>
+              <div class="invalid-feedback">Please enter the society name.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="demoContact">Contact Number</label>
+              <input type="tel" class="form-control" id="demoContact" name="contact" placeholder="e.g. 9980094927" pattern="[0-9+\-\s]{7,15}" required>
+              <div class="invalid-feedback">Please enter a valid contact number.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="demoEmail">Email</label>
+              <input type="email" class="form-control" id="demoEmail" name="email" placeholder="you@example.com" required>
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+            <button type="submit" class="demo-submit">Submit Request <i class="bi bi-arrow-right"></i></button>
+          </form>
+
+          <div id="demoSuccess" class="demo-success" hidden>
+            <div class="demo-success-icon"><i class="bi bi-check-lg"></i></div>
+            <h4>Thank you!</h4>
+            <p>Your demo request has been received. Our team will reach out to you shortly.</p>
+            <button type="button" class="demo-close-btn" data-bs-dismiss="modal">Done</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .demo-modal { border: none; border-radius: 20px; overflow: hidden; }
+    .demo-modal .modal-header { border-bottom: 1px solid #eef2f4; padding: 1.4rem 1.6rem; align-items: flex-start; }
+    .demo-eyebrow { display: inline-flex; align-items: center; gap: 6px; font-size: 0.7rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #155E75; background: rgba(21,94,117,0.1); padding: 4px 12px; border-radius: 999px; margin-bottom: 8px; }
+    .demo-modal .modal-title { font-size: 1.4rem; font-weight: 800; color: #1a1a1a; margin: 0; }
+    .demo-modal .modal-body { padding: 1.4rem 1.6rem 1.8rem; }
+    .demo-modal .form-label { font-weight: 600; font-size: 0.88rem; color: #333; margin-bottom: 5px; }
+    .demo-modal .form-control { border-radius: 10px; padding: 11px 14px; border: 1px solid #d8dee2; font-size: 0.95rem; }
+    .demo-modal .form-control:focus { border-color: #155E75; box-shadow: 0 0 0 3px rgba(21,94,117,0.15); }
+    .demo-submit { width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 8px; margin-top: 6px; background: #155E75; color: #fff; border: none; font-weight: 700; font-size: 1rem; padding: 13px; border-radius: 999px; box-shadow: 0 10px 24px rgba(21,94,117,0.28); transition: transform .3s ease, box-shadow .3s ease; }
+    .demo-submit:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(21,94,117,0.4); }
+    .demo-submit i { transition: transform .3s ease; }
+    .demo-submit:hover i { transform: translateX(4px); }
+    .demo-success { text-align: center; padding: 1.5rem 0.5rem; }
+    .demo-success-icon { width: 70px; height: 70px; margin: 0 auto 16px; border-radius: 50%; background: rgba(21,94,117,0.1); color: #155E75; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; }
+    .demo-success h4 { font-weight: 800; color: #1a1a1a; margin-bottom: 8px; }
+    .demo-success p { color: #5a5a5a; margin-bottom: 22px; }
+    .demo-close-btn { background: #155E75; color: #fff; border: none; font-weight: 700; padding: 10px 30px; border-radius: 999px; }
+  </style>
+
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Demo request form — frontend-only success (no backend yet).
+       When email is confirmed, POST the form details to the email service in the TODO below. -->
+  <script>
+    (function () {
+      var form = document.getElementById("demoForm");
+      var success = document.getElementById("demoSuccess");
+      var modalEl = document.getElementById("demoModal");
+      if (!form || !modalEl) return;
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+          form.classList.add("was-validated");
+          return;
+        }
+        // TODO (once email is confirmed): send these details to the email service.
+        // var data = new FormData(form); // fields: name, society, contact, email
+        form.style.display = "none";
+        success.hidden = false;
+      });
+
+      // reset to a fresh form whenever the modal is closed
+      modalEl.addEventListener("hidden.bs.modal", function () {
+        form.reset();
+        form.classList.remove("was-validated");
+        form.style.display = "";
+        success.hidden = true;
+      });
+    })();
+  </script>
 
   <!-- Stats Section: count-up + progress bar on scroll -->
   <script>
