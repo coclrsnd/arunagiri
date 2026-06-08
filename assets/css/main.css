@@ -2904,6 +2904,22 @@ section,
   color: #1a8a5a;
 }
 
+/* 3 distinct colors for the 3 numeric stat counts (not primary blue / green) */
+.stats .row.g-5 > div:nth-child(1) .stat-count,
+.stats .row.g-5 > div:nth-child(1) .stat-suffix {
+  color: #ef8009; /* amber */
+}
+
+.stats .row.g-5 > div:nth-child(2) .stat-count,
+.stats .row.g-5 > div:nth-child(2) .stat-suffix {
+  color: #7c3aed; /* purple */
+}
+
+.stats .row.g-5 > div:nth-child(3) .stat-count,
+.stats .row.g-5 > div:nth-child(3) .stat-suffix {
+  color: #e11d48; /* rose */
+}
+
 .stats .stat-label {
   font-size: 0.8rem;
   text-transform: uppercase;
